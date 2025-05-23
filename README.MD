@@ -43,5 +43,5 @@ docker build -t exercicio02:1.0 .
 3- Executar o container com a imagem gerada
 
 ```
-docker run -d -p 8080:80 -t exercicio02 exercicio02:1.0
+docker run -d -p 8080:80 --name exercicio02 exercicio02:1.0
 ```
