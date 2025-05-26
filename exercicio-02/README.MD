@@ -2,23 +2,18 @@
 
 Crie um container com Nginx que sirva uma página HTML customizada (index.html). Monte um volume local com esse arquivo para que ele apareça na raiz do site (/usr/share/nginx/html). Acesse a página via http://localhost.
 
-1- Criação do Dockerfile
-```Dockerfile
-FROM nginx:stable-alpine3.21-perl
-RUN apk add --no-cache git
-RUN rm -rf /usr/share/nginx/html/*
-RUN git clone https://github.com/Thullyoo/formulario-page-html-css-dribbleinsp.git /usr/share/nginx/html/
-EXPOSE 80
-```
-
-2- Gerar a build da Image do Dockerfile
+1- Clonando a página html para máquina local
 
 ```
-docker build -t exercicio02:1.0 .
+git clone https://github.com/Thullyoo/formulario-page-html-css-dribbleinsp.git
 ```
 
-3- Executar o container com a imagem gerada
+2- Executar o container com o volume do novo html
 
 ```
-docker run -d -p 8080:80 --name exercicio02 exercicio02:1.0
+docker run --name meu_nginx_container -p 80:80 -v <SEU_PATH_DO_HTML_AQUI>:/usr/share/nginx/html nginx:stable-alpine3.21-perl
 ```
+
+3- Acessar http://localhost:80
+
+![Foto do site](image1.png)
