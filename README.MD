@@ -24,6 +24,7 @@ docker run meu-echo:1.0
 ```
 
 ## Exercício 2
+
 Crie um container com Nginx que sirva uma página HTML customizada (index.html). Monte um volume local com esse arquivo para que ele apareça na raiz do site (/usr/share/nginx/html). Acesse a página via http://localhost.
 
 1- Criação do Dockerfile
@@ -70,6 +71,7 @@ apt install curl
 ```
 
 ## Exercício 4
+
 Suba um container do MySQL (pode usar a imagem mysql:5.7), utilizando um volume nomeado para armazenar os dados. Crie um banco de dados, pare o container, suba novamente e verifique se os dados persistem.
 
 1- Criar o volume no qual o container irá armazenar:
@@ -118,4 +120,20 @@ docker start db_teste
 mysql -u root -p
 use db_teste;
 SELECT * FROM db_teste;
+```
+
+## Exercício 5
+
+Crie um container com a imagem alpine passando uma variável de ambiente chamada MEU_NOME com seu nome. Execute o container e imprima o valor da variável com o comando echo.
+
+1- Executar um container com a imagem do alpine atribuindo uma variável MEU_NOME 
+
+```
+docker run -it -e MEU_NOME=Thullyo alpine:3.21.3
+```
+
+2- No terminal do container printar na tela a variável
+
+```
+echo $MEU_NOME
 ```
