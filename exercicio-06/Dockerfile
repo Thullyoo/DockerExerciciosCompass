@@ -1,10 +1,3 @@
-## Exercício 6 
-
-Utilize um multi-stage build para otimizar uma aplicação Go, reduzindo o tamanho da imagem final. Utilize para praticar o projeto [GS PING](https://github.com/docker/docker-gs-ping) desenvolvido em Golang.
-
-1- Criação do Dockerfile
-
-```
 ## BUILDER
 # Associamos essa fase como builder, pois nela iremos gerar a build principal
 FROM golang:1.19 AS builder
@@ -40,20 +33,3 @@ EXPOSE 8080
 
 # Executamos a build
 CMD [ "/docker-gs-ping" ]
-```
-
-2- Gerar a imagem do Dockerfile
-
-``` 
-docker build -t testego:v1 .
-```
-
-3- Executar o container com a imagem gerada
-
-```
-docker run -p 8080:8080 --name teste_go testego:v1
-```
-
-4- Verificar no http://localhost:8080
-
-![Imagem do site](image1.png)
