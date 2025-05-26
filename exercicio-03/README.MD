@@ -19,3 +19,7 @@ apt update && apt upgrade
 ```
 apt install curl
 ```
+
+4- Verificar se o curl instalou
+
+![Foto do curl](image1.png)
