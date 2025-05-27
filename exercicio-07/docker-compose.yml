@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  frontend:
+    restart: always
+    build:
+      context: frontend
+      target: development
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    networks:
+      - frontend-express
+
+  backend:
+    restart: always
+    build: 
+      context: backend
+      target: development
+    depends_on:
+      - mongo
+    expose:
+      - 3000
+    networks:
+      - mongo-express
+      - frontend-express
+  
+  mongo:
+    restart: always
+    image: mongo:latest
+    expose:
+      - 27017
+    networks:
+      - mongo-express
+networks:
+  frontend-express:
+  mongo-express:
+    
