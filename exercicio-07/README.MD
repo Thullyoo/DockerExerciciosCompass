@@ -44,5 +44,14 @@ services:
 networks: # SEPARAÇÃO DAS REDES
   frontend-express:
   mongo-express:
-    
 ```
+
+2- Executar o docker compose
+
+```
+docker-compose up --build
+```
+
+3- Verificar o resultado no http://localhost:3000
+
+![Imagem do site](image1.png)
