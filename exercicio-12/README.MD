@@ -1,4 +1,4 @@
-# Exercício: Otimização de Dockerfile para Segurança e Desempenho
+# Exercício 12
 
 ## Questão
 
