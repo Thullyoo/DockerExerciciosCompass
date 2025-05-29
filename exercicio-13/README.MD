@@ -23,15 +23,15 @@ import datetime
 print("Data atual: " ,datetime.date.today());
 ```
 
-2. Entrar em uma conta no Docker Hub e criar um novo repositório
+2. Entrar em uma conta no Docker Hub e criar um novo repositório, e logar na sua máquina local
 
 ![Imagem criação repositório](image1.png)
 
 3. Gerar a imagem e enviar para o Docker Hub
 
 ```
-docker build -t thullyodev/meu-echo:v1 .
-docker push thullyodev/meu-echo:v1   
+docker build -t <seurepositorioaqui>/meu-echo:v1 .
+docker push <seurepositorioaqui>/meu-echo:v1   
 ```
 
 4. Verificar se está no repositório
