@@ -1,8 +1,6 @@
-# Exercício 12
+## Exercício 13
 
-## Questão
-
-13. Crie um Dockerfile que use a imagem python:3.11-slim, copie um script Python local (app.py) e o execute com CMD. O script pode imprimir a data e hora atual.
+Crie um Dockerfile que use a imagem python:3.11-slim, copie um script Python local (app.py) e o execute com CMD. O script pode imprimir a data e hora atual.
 
 a. Crie uma conta no Docker Hub.
 
